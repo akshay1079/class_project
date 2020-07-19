@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>hello {{name}}, have good day..!</h1>
+<h2>roll number is:-{{rn}}, marks is:-{{marks}}</h2>
+<h2>{{li}}</h2>
+{% for ele in li %}
+<h2>{{ele}}</h2>
+{% endfor %}
+    {% if age > 0 %}
+        <h2>Age is :-{{age}}</h2>
+    {% elif age < 0 %}
+        <h2>invalid</h2>
+    {% endif %}
+</body>
+</html>

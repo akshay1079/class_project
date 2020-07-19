@@ -1,0 +1,21 @@
+{% extends 'third/base.html' %}
+
+{% block title %}
+    <title>New Customer</title>
+    {% endblock %}
+
+{%  block content %}
+<h1><button class="btn btn-secondary" style="float: centre; background: lightblue;"><a href="{% url 'allCustomers' %}">See Customer Here</a></button></h1>
+    <form action="" method="post" class="jumbotron" style=" width: 500px;">
+        {% csrf_token %}
+       <label> Enter Name:</label><br>
+        <input type="text" name="cname"><br>
+        <label>Enter Address:</label><br>
+        <input type="text" name="addr"><br>
+        <label>Enter Email:</label><br>
+        <input type="text" name="email"><br>
+        <label>Enter Mobile No:</label><br>
+        <input type="text" name="mono"><br><br>
+        <input type="submit" name="submit">
+    </form>
+    {% endblock %}

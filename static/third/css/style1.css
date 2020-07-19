@@ -1,0 +1,58 @@
+header h1
+    {
+        /*background: springgreen;*/
+        text-align:center;
+    }
+    .my_navbar
+    {
+        background-color:springgreen;
+        list-style-type: none;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    li
+    {
+        float: left;
+    }
+    li a
+    {
+        text-decoration: none;
+        color: black;
+        display:block;
+        padding: 15px 15px 15px 20px;
+    }
+    .search-form{
+    padding:5px;
+	margin-top:15px;
+	float:right;
+	margin-right:100px;
+	}
+	}
+input[type=text]{
+	padding:5px;
+	border:none;
+	font-size:16px;
+	font-family:sans-serif;
+}
+button{
+	background:orange;
+	color:white;
+	border-radius:0 5px 5px 0;
+	cursor:pointer;
+	position:relative;
+	padding:5px;
+	font-family:sans-serif;
+	border:none;
+	font-size:16px;
+}
+
+    li a:hover
+    {
+        background-color: orange;
+    }
+    footer h4
+    {
+        background-color: gray;
+        text-align: center;
+    }

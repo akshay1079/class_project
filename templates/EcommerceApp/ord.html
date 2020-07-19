@@ -1,0 +1,16 @@
+{% extends 'third/base.html' %}
+
+{% block title %}
+    <title>New Order</title>
+    {% endblock %}
+
+{%  block content %}
+<h1><button class="btn btn-secondary" style="float: centre; background: lightblue;"><a href="{% url 'allOrder' %}">See Order Here</a></button></h1>
+
+      <form action="" method="post" class="jumbotron" style="width: 500px" >
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit">
+
+
+{% endblock %}

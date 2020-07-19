@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallary</title>
+  <link rel="stylesheet" href="{% static 'firstApp/css/style1.css' %}">
+</head>
+<body>
+
+    <div style="text-align:center">
+  <h2>Tabbed Image Gallery</h2>
+  <p>Click on the images below:</p>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="{% static 'firstApp/images/1.jpg' %}" alt="akshu" style="width:50%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="{% static 'firstApp/images/2.jpg' %}" alt="nayan" style="width:50%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="{% static 'firstApp/images/3.jpg' %}" alt="bike" style="width:50%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="{% static 'firstApp/images/4.jpg' %}" alt="me.." style="width:50%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:50%">
+  <div id="imgtext"></div>
+</div>
+
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% extends 'third/base.html' %}
+
+{% block title %}
+    <title>All Customer</title>
+    {% endblock %}
+
+{%  block content %}
+<h1><button class="btn btn-secondary" style="float: right; background: white;"><a href="{% url 'addorder' %}">Add New Order Here</a></button></h1>
+<h1><button class="btn btn-secondary" style="float: right; background: lightblue;"><a href="{% url 'allCustomers' %}">See Customer Here</a></button></h1>
+    <h1>All Orders</h1>
+<table class="table table-striped" border="1">
+    <thead class="thead-dark">
+    <tr>
+        <th>Product Name</th>
+         <th>Batch No.</th>
+         <th>Qty</th>
+         <th>Price</th>
+        <th>Seller</th>
+        <th>Customer</th>
+    </tr>
+    </thead>
+    {% for o in order %}
+    <tr>
+        <th>{{o.pname}}</th>
+        <th>{{o.pbatch_no}}</th>
+        <th>{{o.pqty}}</th>
+        <th>{{o.pprice}}</th>
+        <th>{{o.pseller}}</th>
+        <th>{{o.customer}}</th>
+    </tr>
+    {% endfor %}
+ </table>
+    {% endblock %}

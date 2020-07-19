@@ -1,0 +1,33 @@
+{% extends 'third/base.html' %}
+
+
+{% block content %}
+
+
+{% block title %}
+    <title>All Student</title>
+    {% endblock %}
+
+
+
+<h1>hello...</h1>
+    <table class="table table-dark">
+        <thead class="thead-dark">
+        <tr>
+            <th>RN</th>
+            <th>Name</th>
+            <th>Marks</th>
+        </tr>
+        </thead>
+        {% for s in stu %}
+        <tr>
+            <th>{{s.rn}}</th>
+            <th>{{s.name}}</th>
+            <th>{{s.mark}}</th>
+        </tr>
+        {% endfor%}
+    </table>
+
+
+
+{% endblock %}
