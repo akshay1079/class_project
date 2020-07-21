@@ -46,12 +46,12 @@ button{
 	border:none;
 	font-size:16px;
 }
-
-    li a:hover
-    {
+li a:hover
+{
         background-color: orange;
-    }
-    footer h4
+        }
+
+footer h4
     {
         background-color: gray;
         text-align: center;

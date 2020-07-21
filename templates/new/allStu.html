@@ -1,0 +1,29 @@
+{% extends 'third/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <title>all Student</title>
+{% endblock %}
+
+{% block content %}
+    <table border="1" class=" table">
+          <thead class="thead-dark">
+        <tr>
+        <th>rn</th>
+        <th>name</th>
+        <th>marks</th>
+            <th>password</th>
+            </tr>
+          </thead>
+        {% for a in allStu %}
+        <tr>
+        <th>{{a.rn}}</th>
+        <th>{{a.name}}</th>
+        <th>{{a.marks}}</th>
+            <th>{{a.pw}}</th>
+        </tr>
+
+{% endfor %}
+    </table>
+{% endblock %}

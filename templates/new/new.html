@@ -1,0 +1,24 @@
+{% extends 'third/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}
+<title>New Student</title>
+{% endblock %}
+
+{% block content %}
+<style>
+body  {
+background-color: lightgray;
+}
+</style>
+    <form method="post" class="container">
+        {% csrf_token %}
+       <!-- {{form.as_p}} -->
+       <!--  {{form.as_ul}}-->
+       {{form | crispy}}
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+    </form>
+<br>
+<br><br>
+{% endblock %}

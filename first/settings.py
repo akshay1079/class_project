@@ -41,8 +41,14 @@ INSTALLED_APPS = [
     'secondApp',
     'third',
     'EcommerceApp',
+    'new',
+    'crispy_forms',
 
 ]
+
+#crispy form configure
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

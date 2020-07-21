@@ -22,5 +22,6 @@ urlpatterns = [
     path('sn/',include('secondApp.urls')),
     path('th/', include('third.urls')),
     path('ecom/',include('EcommerceApp.urls')),
+    path('nw/',include('new.urls')),
 
 ]
